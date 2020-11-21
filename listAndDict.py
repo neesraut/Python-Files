@@ -46,3 +46,12 @@ test_dict =[
     if each['name']=='Ram' and each['classs']=='5':
         print("Data with name ram and class 5 is {each}".format(each=each))
 '''
+##to make the data list as desired - lets say we need only those list that have ram and shyam in name and need to store in another list
+
+##define/initialize the list outside of loop
+'''required_list = []
+for each in test_dict:
+    if each['name'] in ['Ram','Shyam']:
+        required_list.append(each)
+print("the required list is {required_list}".format(required_list=required_list))
+'''
