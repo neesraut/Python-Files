@@ -69,3 +69,13 @@ def appendList():
 
 appendList()  #calling function
 '''
+##function with Arguments
+def appendList(list1,list2):
+    list3 =[]
+    list3.append(list1)
+    list3.append(list2)
+    print("The appened list is{list3}".format(list3=list3))
+
+list1=[1,2,3]
+list2=[4,5,6]
+appendList(list1,list2)
