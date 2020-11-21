@@ -94,19 +94,41 @@ print("The appended list is {appendedList}".format(appendedList = returnAppended
 
 ##CLASS AND OBJECTS- OOP CONCEPTS
 
-class userData:
-    def __init__(self,name,classs,country): 
+class UserData:
+    def __init__(self,name,age,country): 
         ##constructor, when the class is called or the object is made this is initialized first
         ##in order to set the variable, to make the data that is mostly used in class
         ##self is the default parameter, can be any
         self.name = name
-        self.classs = classs
+        self.age = age
         self.country = country
     
     def printUserDetails(self):
-        print("The user name is {name}, class is {classs}, country is {country}".format(name=self.name,classs=self.classs,country=self.country))
+        print("The user name is {name}, age is {age}, country is {country}".format(name=self.name,age=self.age,country=self.country))
 
-userData1 = userData("ram",'5','china')
-userData1.printUserDetails()
+### userData1 = UserData("ram",'5','china')
+### userData1.printUserDetails()
 
-    
+##Another class using other class objects
+class UserSalaray:
+    def __init__(self,userDataAsObject):
+        self.name = userDataAsObject.name
+        self.age = int(userDataAsObject.age)
+
+        self.country = userDataAsObject.country
+        if self.age <=24:
+            self.salary = "10000"
+        else:
+            self.salary="20000"
+        
+    def showUserDetails(self):
+        print("The user name is {name} with age {age} who lives in {country} has a salary amount of {salary}".format(name=self.name,age=self.age,country=self.country,salary=self.salary))
+
+
+##make the object of the class that you want to use the attributes
+userData1 = UserData("ram",'5','china')
+userSalary1 = UserSalaray(userData1)
+userSalary1.showUserDetails()
+
+
+
