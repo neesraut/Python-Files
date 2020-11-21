@@ -91,3 +91,22 @@ def returnAppendedList(list1,list2):
 
 print("The appended list is {appendedList}".format(appendedList = returnAppendedList([1,2,4],[5,9,10])))
 '''
+
+##CLASS AND OBJECTS- OOP CONCEPTS
+
+class userData:
+    def __init__(self,name,classs,country): 
+        ##constructor, when the class is called or the object is made this is initialized first
+        ##in order to set the variable, to make the data that is mostly used in class
+        ##self is the default parameter, can be any
+        self.name = name
+        self.classs = classs
+        self.country = country
+    
+    def printUserDetails(self):
+        print("The user name is {name}, class is {classs}, country is {country}".format(name=self.name,classs=self.classs,country=self.country))
+
+userData1 = userData("ram",'5','china')
+userData1.printUserDetails()
+
+    
