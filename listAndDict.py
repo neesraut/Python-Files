@@ -70,6 +70,7 @@ def appendList():
 appendList()  #calling function
 '''
 ##function with Arguments
+'''
 def appendList(list1,list2):
     list3 =[]
     list3.append(list1)
@@ -79,3 +80,14 @@ def appendList(list1,list2):
 list1=[1,2,3]
 list2=[4,5,6]
 appendList(list1,list2)
+'''
+
+##function with return type
+'''list3 = []
+def returnAppendedList(list1,list2):
+    list3.append(list1)
+    list3.append(list2)
+    return list3
+
+print("The appended list is {appendedList}".format(appendedList = returnAppendedList([1,2,4],[5,9,10])))
+'''
