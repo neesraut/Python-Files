@@ -55,3 +55,17 @@ for each in test_dict:
         required_list.append(each)
 print("the required list is {required_list}".format(required_list=required_list))
 '''
+
+##FUnction In Python 
+##no arguments
+'''
+def appendList():
+    list1=[1,2,3]
+    list2=[4,5,6]
+    list3 = []
+    list3.append(list1)
+    list3.append(list2)
+    print("The appended List is {list3}".format(list3=list3))
+
+appendList()  #calling function
+'''
